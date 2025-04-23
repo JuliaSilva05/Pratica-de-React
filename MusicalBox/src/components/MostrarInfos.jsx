@@ -3,7 +3,13 @@ import { useState, useEffect } from 'react'
 const url_musica = "https://musicbrainz.org/ws/2/artist?query=gender:female%20AND%20type:person%20AND%20country:br&fmt=json&limit=5"
 
 function MostrarInfos(){
-  const [artistas, setArtista] = useState([]);
+  const [artistas, setArtista] = useState([{nome:['']}]);
+
+  if (artistas.name == undefined){
+    console.log("undefined")
+  } else {
+    console.log("deboas")
+  }
 /*
   useEffect(() => {
     fetch("https://musicbrainz.org/ws/2/artist?query=gender:female%20AND%20type:person%20AND%20country:br&fmt=json&limit=5")
@@ -38,8 +44,8 @@ function MostrarInfos(){
       <button onClick={handleBtCarregarClick}>Carregar</button>
       <ol>
         {artistas.map((artista) => (
-          <li key={artistas.id}>
-            {artistas.name}
+          <li key={artista.id}>
+            {artista.name}
           </li>
         ))}
       </ol>
