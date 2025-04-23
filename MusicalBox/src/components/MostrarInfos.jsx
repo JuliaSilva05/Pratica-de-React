@@ -21,8 +21,9 @@ function MostrarInfos(){
         console.log("resp ok");
         const data = await response.json();
         console.log(data)
-        console.log(data[0])
-        setArtista(data);
+        console.log(data[0].name)
+        console.log(data.name)
+        setArtista(data.results);
       }else {
         console.log("response status", response.status);
         console.log("response status text", response.statusText);
