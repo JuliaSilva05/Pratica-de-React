@@ -45,7 +45,7 @@ function MostrarInfos(){
       <ol>
         {artistas.map((artista) => (
           <li key={artista.id}>
-            {artista.name}
+            {artista}
           </li>
         ))}
       </ol>
