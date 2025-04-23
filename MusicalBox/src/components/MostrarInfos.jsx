@@ -7,6 +7,7 @@ function MostrarInfos(){
 
   if (artistas.name == undefined){
     console.log("undefined")
+    artistas.name = "Fulano"
   } else {
     console.log("deboas")
   }
