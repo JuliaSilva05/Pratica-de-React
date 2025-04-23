@@ -18,6 +18,7 @@ function MostrarInfos(){
     try {
       const response = await fetch(url);
       if (response.ok){
+        console.log("resp ok");
         const data = await response.json();
         setArtista(data.results);
       }else {
