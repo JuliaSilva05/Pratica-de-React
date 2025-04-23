@@ -22,7 +22,7 @@ function MostrarInfos(){
         const data = await response.json();
         console.log(data)
         console.log(data[0].name)
-        console.log(data.name)
+        console.log(data.artists[0])
         setArtista(data.results);
       }else {
         console.log("response status", response.status);
