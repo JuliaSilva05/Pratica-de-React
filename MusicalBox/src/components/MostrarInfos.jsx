@@ -37,9 +37,9 @@ function MostrarInfos(){
     <>
       <button onClick={handleBtCarregarClick}>Carregar</button>
       <ol>
-        {artistas.map((artista) => (
-          <li key={artista.id}>
-            {artista.name}
+        {artistas.map((artistas) => (
+          <li key={artistas.id}>
+            {artistas.name}
           </li>
         ))}
       </ol>
