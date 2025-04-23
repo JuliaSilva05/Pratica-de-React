@@ -8,7 +8,7 @@ function MostrarInfos(){
   if (artistas.name == undefined){
     console.log("undefined")
   } else {
-    console.log("deboas")
+    console.log("deboas",artistas.name)
   }
 /*
   useEffect(() => {
