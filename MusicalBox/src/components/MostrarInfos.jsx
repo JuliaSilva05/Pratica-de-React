@@ -35,16 +35,14 @@ function MostrarInfos(){
 
   return (
     <>
-      <div>
-        <button onClick={handleBtCarregarClick}>Carregar</button>
-        <ol>
-          {artistas.map((artista) => (
-            <li key={artista.id}>
-              {artista.name}
-            </li>
-          ))}
-        </ol>
-      </div>
+      <button onClick={handleBtCarregarClick}>Carregar</button>
+      <ol>
+        {artistas.map((artista) => (
+          <li key={artista.id}>
+            {artista.name}
+          </li>
+        ))}
+      </ol>
     </>
   )
 
