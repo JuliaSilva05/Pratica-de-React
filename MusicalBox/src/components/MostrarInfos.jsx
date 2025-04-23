@@ -28,6 +28,7 @@ function MostrarInfos(){
   }
 
   function handleBtCarregarClick() {
+    console.log("oioioi")
     carregar(url_musica);
   }
 
