@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const url_musica = "https://musicbrainz.org/ws/2/artist/?query=gender:female%20AND%20type:person%20AND%20area:brazil"
+const url_musica = "https://musicbrainz.org/ws/2/artist/?query=gender:female%20AND%20type:person%20AND%20area:brazil&fmt=json"
 
 function MostrarInfos(){
   const [artistas, setArtista] = useState([]);

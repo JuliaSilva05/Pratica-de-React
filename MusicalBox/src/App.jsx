@@ -14,7 +14,7 @@ function App() {
         </button>
       </div>
 
-      <MostrarInfos></MostrarInfos>
+      <MostrarInfos/>
       
     </>
   )
