@@ -29,7 +29,7 @@ function MostrarInfos(){
       <button onClick={handleBtCarregarClick}>Carregar</button>
       <ol>
         {artistas.map((artista) => (
-          <li key={artista.index}>
+          <li key={artista.id}>
             {artista.name} ({artista.begin-area})
           </li>
         ))}
