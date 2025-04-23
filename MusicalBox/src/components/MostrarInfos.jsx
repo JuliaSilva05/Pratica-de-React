@@ -4,13 +4,13 @@ const url_musica = "https://musicbrainz.org/ws/2/artist?query=gender:female%20AN
 
 function MostrarInfos(){
   const [artistas, setArtista] = useState([]);
-
+/*
   if (artistas.name == undefined){
     console.log("undefined");
   } else {
     console.log("deboas");
   }
-/*
+
   useEffect(() => {
     fetch("https://musicbrainz.org/ws/2/artist?query=gender:female%20AND%20type:person%20AND%20country:br&fmt=json&limit=5")
     .then(response => response.json())
