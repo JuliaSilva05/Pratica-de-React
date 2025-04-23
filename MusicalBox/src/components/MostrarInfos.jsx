@@ -3,11 +3,10 @@ import { useState, useEffect } from 'react'
 const url_musica = "https://musicbrainz.org/ws/2/artist?query=gender:female%20AND%20type:person%20AND%20country:br&fmt=json&limit=5"
 
 function MostrarInfos(){
-  const [artistas, setArtista] = useState([{nome:['']}]);
+  const [artistas, setArtista] = useState([{name: ['']}]);
 
   if (artistas.name == undefined){
     console.log("undefined")
-    artistas.name = "Fulano"
   } else {
     console.log("deboas")
   }
