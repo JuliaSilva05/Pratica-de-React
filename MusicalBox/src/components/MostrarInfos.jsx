@@ -5,6 +5,13 @@ const url_musica = "https://musicbrainz.org/ws/2/artist/?query=gender:female%20A
 function MostrarInfos(){
   const [artistas, setArtista] = useState([]);
 
+  useEffect(() => {
+    fetch("https://musicbrainz.org/ws/2/artist/?query=gender:female%20AND%20type:person%20AND%20area:brazil&fmt=json")
+    .then(response => response.json())
+    .then(data => setArtista(data.results))
+  },[])
+
+/*
   async function carregar(url){
     try {
       const response = await fetch(url);
@@ -23,17 +30,19 @@ function MostrarInfos(){
   function handleBtCarregarClick() {
     carregar(url_musica);
   }
+*/
 
   return (
     <>
-      <button onClick={handleBtCarregarClick}>Carregar</button>
-      <ol>
-        {artistas.map((artista) => (
-          <li key={artista.id}>
-            {artista.name} ({artista.begin-area})
-          </li>
-        ))}
-      </ol>
+      <div>
+        <ol>
+          {artistas.map((artista) => (
+            <li key={artista.id} value={artista.id}>
+              {artista.name}
+            </li>
+          ))}
+        </ol>
+      </div>
     </>
   )
 
