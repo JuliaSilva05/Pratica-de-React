@@ -20,6 +20,7 @@ function MostrarInfos(){
       if (response.ok){
         console.log("resp ok");
         const data = await response.json();
+        console.log(data,data.results)
         setArtista(data.results);
       }else {
         console.log("response status", response.status);
