@@ -4,14 +4,14 @@ const url_musica = "https://musicbrainz.org/ws/2/artist?query=gender:female%20AN
 
 function MostrarInfos(){
   const [artistas, setArtista] = useState([]);
-
+/*
   useEffect(() => {
     fetch("https://musicbrainz.org/ws/2/artist?query=gender:female%20AND%20type:person%20AND%20country:br&fmt=json&limit=5")
     .then(response => response.json())
     .then(data => setArtista(data.results))
   },[])
 
-/**/
+*/
   async function carregar(url){
     try {
       const response = await fetch(url);
@@ -37,8 +37,8 @@ function MostrarInfos(){
       <div>
         <button OnClick={handleBtCarregarClick}>Carregar</button>
         <ol>
-          {artistas.map((artista) => (
-            <li key={artista.id} value={artista.id}>
+          {artistas.map(artista => (
+            <li key={artista.id}>
               {artista.name}
             </li>
           ))}
