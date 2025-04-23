@@ -6,7 +6,7 @@ function MostrarInfos(){
   const [artistas, setArtista] = useState([]);
 
   useEffect(() => {
-    fetch("https://musicbrainz.org/ws/2/artist/?query=gender:female%20AND%20type:person%20AND%20area:brazil&fmt=json")
+    fetch("https://musicbrainz.org/ws/2/artist?query=gender:female%20AND%20type:person%20AND%20country:br&fmt=json&limit=5")
     .then(response => response.json())
     .then(data => setArtista(data.results))
   },[])
