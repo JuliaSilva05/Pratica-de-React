@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const url_musica = "https://musicbrainz.org/ws/2/artist/?query=gender:female%20AND%20type:person%20AND%20area:brazil&fmt=json"
+const url_musica = "https://musicbrainz.org/ws/2/artist?query=gender:female%20AND%20type:person%20AND%20country:br&fmt=json&limit=5"
 
 function MostrarInfos(){
   const [artistas, setArtista] = useState([]);
@@ -11,7 +11,7 @@ function MostrarInfos(){
     .then(data => setArtista(data.results))
   },[])
 
-/*
+/**/
   async function carregar(url){
     try {
       const response = await fetch(url);
@@ -30,12 +30,13 @@ function MostrarInfos(){
   function handleBtCarregarClick() {
     carregar(url_musica);
   }
-*/
+
 
   return (
     <>
       <div>
         <ol>
+          <button OnClick={handleBtCarregarClick}>Carregar</button>
           {artistas.map((artista) => (
             <li key={artista.id} value={artista.id}>
               {artista.name}
