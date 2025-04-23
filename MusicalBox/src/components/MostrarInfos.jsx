@@ -3,8 +3,7 @@ import { useState, useEffect } from 'react'
 const url_musica = "https://musicbrainz.org/ws/2/artist?query=gender:female%20AND%20type:person%20AND%20country:br&fmt=json&limit=5"
 
 function MostrarInfos(){
-  const [dados, setDados] = useState([]);
-  const [artistas, setArtista] = useState({ name: {} });
+  const [artistas, setArtista] = useState([]);
 
 /*
 
