@@ -6,9 +6,9 @@ function MostrarInfos(){
   const [artistas, setArtista] = useState([{name: ['']}]);
 
   if (artistas.name == undefined){
-    console.log("undefined")
+    console.log("undefined");
   } else {
-    console.log("deboas",artistas.name)
+    console.log("deboas");
   }
 /*
   useEffect(() => {
@@ -43,7 +43,7 @@ function MostrarInfos(){
     <>
       <button onClick={handleBtCarregarClick}>Carregar</button>
       <ol>
-        {artistas.map((artista) => (
+        {artistas.name.map((artista) => (
           <li key={artista.id}>
             {artista.name}
           </li>
