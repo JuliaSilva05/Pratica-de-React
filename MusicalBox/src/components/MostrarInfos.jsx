@@ -21,7 +21,12 @@ function MostrarInfos(){
         console.log("resp ok");
         const data = await response.json();
         console.log(data);
-        console.log(data['1'], "hey");
+        //
+        data.forEach((item, index)=> {
+          console.log('${index}: ${item}')
+        })
+        //
+        console.log(Object.keys(data));
         setArtista(data.results);
       }else {
         console.log("response status", response.status);
