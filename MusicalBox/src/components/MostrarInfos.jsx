@@ -21,9 +21,14 @@ function MostrarInfos(){
       if (response.ok){
         console.log("resp ok");
         const data = await response.json();
+        console.log("length1:",Object.length);
+        console.log("length2",data.length);
+        console.log("name:",Object.name);
+        console.log(Object.keys(data));
         console.log("data:",data);
 
-        console.log("length:",Object.length);
+        console.log("length1:",Object.length);
+        console.log("length2",data.length);
         console.log("name:",Object.name);
         console.log(Object.keys(data));
         setArtista(data.results);
