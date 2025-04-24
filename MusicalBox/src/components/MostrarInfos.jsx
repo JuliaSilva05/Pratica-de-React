@@ -14,18 +14,21 @@ function MostrarInfos(){
   },[])
 
 */
+
+  data.forEach((item, index)=> {
+    console.log('${index}: ${item}')
+  })
+
   async function carregar(url){
     try {
       const response = await fetch(url);
       if (response.ok){
         console.log("resp ok");
         const data = await response.json();
-        console.log(data);
-        //
-        data.forEach((item, index)=> {
-          console.log('${index}: ${item}')
-        })
-        //
+        console.log("data:",data);
+
+        console.log("length:",Object.length);
+        console.log("name:",Object.name);
         console.log(Object.keys(data));
         setArtista(data.results);
       }else {
