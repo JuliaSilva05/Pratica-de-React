@@ -47,6 +47,13 @@ function MostrarInfos(){
   }
 
 
+  const itens = artistas.map((artista) => {
+    return (
+          {artista,artistas}
+    )
+  });
+
+
   return (
     <>
       <button onClick={handleBtCarregarClick}>Carregar</button>
