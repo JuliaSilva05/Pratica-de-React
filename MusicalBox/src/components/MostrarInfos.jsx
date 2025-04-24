@@ -15,10 +15,6 @@ function MostrarInfos(){
 
 */
 
-  data.forEach((item, index)=> {
-    console.log('${index}: ${item}')
-  })
-
   async function carregar(url){
     try {
       const response = await fetch(url);
