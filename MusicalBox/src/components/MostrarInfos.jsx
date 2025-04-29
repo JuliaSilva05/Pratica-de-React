@@ -11,7 +11,7 @@ function MostrarInfos(){
         })
         .then((data) => {
           console.log(data);
-          setPhotos(data);
+          setAlbums(data);
         });
     }, []);
 
