@@ -43,13 +43,14 @@ function MostrarInfos(){
 
   return (
     <>
-      <div>
+      <button onClick={useEffect}>Carregar</button>
+      <ol>
         {albums.map((album) => (
           <li key={album.album_id}>
             {album.title} ({album.release_date})
           </li>
         ))}
-      </div>
+      </ol>
     {/*
       <button onClick={carregarAlbums}>Carregar</button>
       <ol>
