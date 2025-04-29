@@ -13,6 +13,8 @@ function MostrarInfos(){
   async function getAlbums() {
     try {
       const response = await fetch(url_albums);
+      print(response)
+      console.log(response)
       return [response];
     } catch (err) {
       console.error("Erro ao buscar álbuns:", err);
