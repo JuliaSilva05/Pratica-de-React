@@ -16,7 +16,7 @@ function MostrarInfos(){
 
   return (
     <>
-      <button onClick={handleBtCarregarClick}>Carregar</button>
+      {/*<button onClick={handleBtCarregarClick}>Carregar</button>*/}
       <ol>
         {albums.map((album)=>(
           <li>
