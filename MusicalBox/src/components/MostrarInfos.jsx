@@ -19,7 +19,7 @@ function MostrarInfos(){
       return [];
     }
   }
-  async function carregarAlbums(params) {
+  async function carregarAlbums() {
     const albums = await getAlbums();
     setAlbums(albums)
   }
