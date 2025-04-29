@@ -6,11 +6,13 @@ function MostrarInfos(){
   const [albums, setAlbums] = useState([])
 
   useEffect(() => {
+    console.log("useEffect")
     // Carregar álbuns
     carregarAlbums()
   }, [])
 
   async function getAlbums() {
+    console.log("getAlbums")
     try {
       const response = await fetch(url_albums);
       print(response)
@@ -22,11 +24,10 @@ function MostrarInfos(){
     }
   }
   async function carregarAlbums() {
+    console.log("carregarAlbums")
     const albums = await getAlbums();
     setAlbums(albums)
   }
-
-  console.log()
 
   return (
     <>
