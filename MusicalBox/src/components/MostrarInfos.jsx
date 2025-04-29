@@ -4,7 +4,18 @@ const url_albums = "https://taylor-swift-api.sarbo.workers.dev/albums"
 
 function MostrarInfos(){
   const [albums, setAlbums] = useState([])
+    useEffect(() => {
+      fetch('https://taylor-swift-api.sarbo.workers.dev/albums')
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          console.log(data);
+          setPhotos(data);
+        });
+    }, []);
 
+  /*
   useEffect(() => {
     console.log("useEffect")
     // Carregar álbuns
@@ -25,12 +36,21 @@ function MostrarInfos(){
   }
   async function carregarAlbums() {
     console.log("carregarAlbums")
-    const albums = await getAlbums();
+    const albums = await getAlbums().then;
     setAlbums(albums)
   }
+*/
 
   return (
     <>
+      <div>
+        {albums.map((album) => (
+          <li key={album.album_id}>
+            {album.title} ({album.release_date})
+          </li>
+        ))}
+      </div>
+    {/*
       <button onClick={carregarAlbums}>Carregar</button>
       <ol>
         {albums.map((album)=>(
@@ -39,8 +59,9 @@ function MostrarInfos(){
           </li>
         ))}
       </ol>
+      */}
     </>
   )
 }
 
-export default MostrarInfos
+export default MostrarInfos;
