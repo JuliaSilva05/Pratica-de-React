@@ -15,8 +15,7 @@ function MostrarInfos(){
     console.log("getAlbums")
     try {
       const response = await fetch(url_albums);
-      print(response)
-      console.log(response)
+      console.log("response:",response)
       return [response];
     } catch (err) {
       console.error("Erro ao buscar álbuns:", err);
@@ -34,7 +33,7 @@ function MostrarInfos(){
       <button onClick={carregarAlbums}>Carregar</button>
       <ol>
         {albums.map((album)=>(
-          <li>
+          <li key={album.album_id}>
             {album.title} ({album.release_date})
           </li>
         ))}
