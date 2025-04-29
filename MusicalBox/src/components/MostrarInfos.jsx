@@ -1,19 +1,28 @@
 import { useState, useEffect } from 'react'
 
-const token = "https://taylor-swift-api.sarbo.workers.dev/albums"
+//const url_albums = "https://taylor-swift-api.sarbo.workers.dev/albums"
 
 function MostrarInfos(){
+  const [albums, setAlbums] = useState([])
+
+  useEffect(() => {
+    // Carregar álbuns
+    fetch('https://taylor-swift-api.sarbo.workers.dev/albums')
+      .then(response => response.json())
+      .then(data => setAlbums(data.results))
+
+  }, [])
 
 
-  function handleBtCarregarClick() {
-    console.log("oioioi")
-    carregar(url_musica);
-  }
   return (
     <>
       <button onClick={handleBtCarregarClick}>Carregar</button>
       <ol>
-        oi
+        {albums.map((album)=>(
+          <li>
+            {album.title} ({album.release_date})
+          </li>
+        ))}
       </ol>
     </>
   )
