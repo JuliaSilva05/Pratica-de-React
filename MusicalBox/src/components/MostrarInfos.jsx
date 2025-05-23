@@ -13,6 +13,7 @@ function MostrarAlbums(){
           console.log(data);
           setAlbums(data);
         });
+
     }, []);
 
   return (
@@ -21,7 +22,7 @@ function MostrarAlbums(){
         {albums.map((album) => (
           <li key={album.album_id}>
             {album.title} ({album.release_date})
-            <ul>oi</ul>
+            <ul>{album.album_id}</ul>
           </li>
         ))}
       </ol>
