@@ -21,7 +21,7 @@ function MostrarAlbums(){
         {albums.map((album) => (
           <li key={album.album_id}>
             {album.title} ({album.release_date})
-            <li>oi</li>
+            <ul>oi</ul>
           </li>
         ))}
       </ol>
